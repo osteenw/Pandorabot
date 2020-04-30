@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    <category>
+        <pattern>main</pattern>
+        <template>Hi, I am a career bot working for the computer science department.
+        <br /><br />To begin please choose one of the options below:
+            <button>
+                <text>Learn about career options</text>
+                <postback>career list</postback>
+            </button>
+            <button>
+                <text>Choosing a career</text>
+                <postback>pick career</postback>
+            </button>    
+        </template>
+    </category>
+   
+   <category>
+        <pattern>career list</pattern>
+        <template>Here are possible career options with a computer science degree:
+            <button>
+                <text>Software Developer</text>
+                <postback>software dev</postback>
+            </button>
+            <button>
+                <text>Web Developer</text>
+                <postback>web dev</postback>
+            </button>
+            <button>
+                <text>Mobile Application Developer</text>
+                <postback>mobile dev</postback>
+            </button>
+            <button>
+                <text>Data Scientist</text>
+                <postback>data scientis</postback>
+            </button>
+            <button>
+                <text>Information Security Analyst</text>
+                <postback>infosec analyst</postback>
+            </button>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>pick career</pattern>
+        <template>To best help you choose a career, you will need to answer a few questions to help identify strengths and weaknesses.
+        <br /><br />
+        Would you rather: 
+            <button>
+                <text>Program</text>
+                <postback>programming question</postback>
+            </button>
+            <button>
+                <text>Work With Data</text>
+                <postback>data science answer</postback>
+            </button>            
+            <button>
+                <text>Work With Networks</text>
+                <postback>infosec answer</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>programming question</pattern>
+        <template> Do you love interacting with mobile applications and aspire to build one?  
+            <reply>
+                <text>Yes</text>
+                <postback>mobile answer</postback>
+            </reply>
+            <reply>
+                <text>No</text>
+                <postback>programming question 2</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>programming question 2</pattern>
+        <template> Would you rather:
+            <button>
+                <text>Work on desktop applications?</text>
+                <postback>software dev answer</postback>
+            </button>
+            <button>
+                <text>Work on web applications?</text>
+                <postback>web dev answer</postback>
+            </button>
+        </template>
+    </category>
+    
+</aiml>

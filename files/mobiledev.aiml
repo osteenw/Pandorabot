@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+        <pattern>mobile answer</pattern>
+        <template>You would be a good fit as a mobile application developer.
+        <br /><br />Would you like to learn more?
+            <reply>
+                <text>Yes</text>
+                <postback>mobiledev</postback>
+            </reply>
+            <reply>
+                <text>No</text>
+                <postback>end</postback>
+            </reply>
+
+        </template>
+    </category>
+    
+    <category>
+        <pattern>mobiledev</pattern>
+        <template>Mobile application developers create apps and games for 
+        mobile devices.
+            <br></br> <br></br>
+            <link>
+                <text> Learn more about Mobile Application Developers</text>
+                <url>https://www.careerexplorer.com/careers/app-developer/</url>
+            </link>
+            <button>
+                <text>Explore other careers.</text>
+                <postback>career list</postback>
+            </button>
+            <button>
+                <text>Help picking a career.</text>
+                <postback>pick career</postback>
+            </button>
+            <button>
+                <text>End</text>
+                <postback>end</postback>
+            </button>
+        </template>
+    </category>
+</aiml>

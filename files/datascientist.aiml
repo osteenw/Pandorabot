@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+        <pattern>data science answer</pattern>
+        <template>You would be a good fit as a data scientist.
+        <br /><br />Would you like to learn more?
+            <reply>
+                <text>Yes</text>
+                <postback>datascientist</postback>
+            </reply>
+            <reply>
+                <text>No</text>
+                <postback>end</postback>
+            </reply>
+
+        </template>
+    </category>
+    
+    <category>
+        <pattern>datascientist</pattern>
+        <template>Data scientist's collect, analyze, and report on big sets of data.
+            <br></br> <br></br>
+            <link>
+                <text> Learn more about Data Scientists</text>
+                <url>https://www.careerexplorer.com/careers/data-scientist/</url>
+            </link>
+            <button>
+                <text>Explore other careers.</text>
+                <postback>career list</postback>
+            </button>
+            <button>
+                <text>Help picking a career.</text>
+                <postback>pick career</postback>
+            </button>
+            <button>
+                <text>End</text>
+                <postback>end</postback>
+            </button>
+        </template>
+    </category>
+</aiml>

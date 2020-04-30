@@ -2,7 +2,54 @@
 <aiml version="2.0">
     
     <category>
+        <pattern>*</pattern>
+        <template>
+        <random>
+            <li>What was that?</li>
+            <li>I don’t understand</li>
+            <li>Can you say that more clearly?</li>
+        </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>end</pattern>
+        <template> Thank you for your time. If you would like to begin chatting
+        please type "start".
+        </template>
+    </category>
+    
+    <category>
+        <pattern>hi ^</pattern>
+        <template> Hello there, would you like to begin?
+            <reply>
+                <text>Yes</text>
+                <postback>start</postback>
+            </reply>
+            <reply>
+                <text>No</text>
+                <postback>end</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>hello ^</pattern>
+        <template> Hello there, would you like to begin?
+            <reply>
+                <text>Yes</text>
+                <postback>start</postback>
+            </reply>
+            <reply>
+                <text>No</text>
+                <postback>end</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
         <pattern>main</pattern>
+        <pattern>start</pattern>
         <template>Hi, I am a career bot working for the computer science department.
         <br /><br />To begin please choose one of the options below:
             <button>
@@ -21,23 +68,23 @@
         <template>Here are possible career options with a computer science degree:
             <button>
                 <text>Software Developer</text>
-                <postback>software dev</postback>
+                <postback>softwaredev</postback>
             </button>
             <button>
                 <text>Web Developer</text>
-                <postback>web dev</postback>
+                <postback>webdev</postback>
             </button>
             <button>
                 <text>Mobile Application Developer</text>
-                <postback>mobile dev</postback>
+                <postback>mobiledev</postback>
             </button>
             <button>
                 <text>Data Scientist</text>
-                <postback>data scientis</postback>
+                <postback>datascientist</postback>
             </button>
             <button>
                 <text>Information Security Analyst</text>
-                <postback>infosec analyst</postback>
+                <postback>infosec</postback>
             </button>
         </template>
     </category>

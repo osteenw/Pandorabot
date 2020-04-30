@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+        <pattern>web dev answer</pattern>
+        <template>You would be a good fit as a web developer.
+        <br /><br />Would you like to learn more?
+            <reply>
+                <text>Yes</text>
+                <postback>webdev</postback>
+            </reply>
+            <reply>
+                <text>No</text>
+                <postback>end</postback>
+            </reply>
+
+        </template>
+    </category>
+    
+    <category>
+        <pattern>webdev</pattern>
+        <template>Web developers are responsible for programming the code that
+        determines website function.
+            <br></br> <br></br>
+            <link>
+                <text> Learn more about Web Developers</text>
+                <url>https://money.usnews.com/careers/best-jobs/web-developer</url>
+            </link>
+            <button>
+                <text>Explore other careers.</text>
+                <postback>career list</postback>
+            </button>
+            <button>
+                <text>Help picking a career.</text>
+                <postback>pick career</postback>
+            </button>
+            <button>
+                <text>End</text>
+                <postback>end</postback>
+            </button>
+        </template>
+    </category>
+</aiml>

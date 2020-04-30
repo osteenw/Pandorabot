@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+        <pattern>software dev answer</pattern>
+        <template>You would be a good fit as a software developer.
+        <br /><br />Would you like to learn more?
+            <reply>
+                <text>Yes</text>
+                <postback>softwaredev</postback>
+            </reply>
+            <reply>
+                <text>No</text>
+                <postback>end</postback>
+            </reply>
+
+        </template>
+    </category>
+    
+    <category>
+        <pattern>softwaredev</pattern>
+        <template>Software development includes the development and building of 
+        computer systems software and applications software.
+            <br></br> <br></br>
+            <link>
+                <text> Learn more about Software Developers</text>
+                <url>https://money.usnews.com/careers/best-jobs/software-developer</url>
+            </link>
+            <button>
+                <text>Explore other careers.</text>
+                <postback>career list</postback>
+            </button>
+            <button>
+                <text>Help picking a career.</text>
+                <postback>pick career</postback>
+            </button>
+            <button>
+                <text>End</text>
+                <postback>end</postback>
+            </button>
+        </template>
+    </category>
+</aiml>
